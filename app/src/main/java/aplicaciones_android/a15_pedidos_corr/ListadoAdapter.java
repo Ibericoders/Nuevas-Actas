@@ -5,12 +5,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CheckBox;
 import android.widget.TextView;
+
 
 import java.util.ArrayList;
 
 import javabeans.Acta;
+
+import static android.R.attr.start;
+import static android.media.CamcorderProfile.get;
+import static aplicaciones_android.a15_pedidos_corr.R.id.Titulo;
 
 /**
  * Created by USUARIO on 11/04/2017.

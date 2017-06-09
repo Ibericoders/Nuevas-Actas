@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="aplicaciones_android.a15_pedidos_corr.MainActivity">
+    tools:context="aplicaciones_android.a15_pedidos_corr.aplicaciones_android.Actas.MainActivity">
 
     <LinearLayout
         android:layout_width="368dp"
@@ -14,7 +14,7 @@
         tools:layout_editor_absoluteY="8dp">
 
         <LinearLayout
-            android:id="@+id/Registro y mostrar"
+            android:id="@+id/Registro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -72,20 +72,18 @@
             tools:layout_editor_absoluteY="8dp">
 
             <Button
-                android:id="@+id/Button"
+                android:id="@+id/btFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:onClick="fecha"
                 android:text="Fecha de Reunión" />
 
-            <EditText
+            <TextView
                 android:id="@+id/tvFecha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:layout_weight="1" />
 
         </LinearLayout>
 
@@ -97,20 +95,20 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
 
-            <TextView
-                android:id="@+id/textView5"
+            <Button
+                android:id="@+id/button2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="hora"
                 android:text="Hora" />
 
-            <EditText
-                android:id="@+id/edtHora"
+            <TextView
+                android:id="@+id/tvHora"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -189,7 +187,7 @@
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/Puntos Futuros"
+            android:id="@+id/PuntosFuturos"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -348,20 +346,20 @@
             tools:layout_editor_absoluteX="8dp"
             tools:layout_editor_absoluteY="8dp">
 
-            <TextView
-                android:id="@+id/textView5"
+            <Button
+                android:id="@+id/btProxima"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Proxima Reunión" />
+                android:onClick="fecha"
+                android:text="Proxima reunión" />
 
-            <EditText
-                android:id="@+id/edtProxima"
+            <TextView
+                android:id="@+id/tvProxima"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:ems="10"
-                android:inputType="textPersonName" />
+                android:layout_weight="1" />
+
         </LinearLayout>
 
         <LinearLayout

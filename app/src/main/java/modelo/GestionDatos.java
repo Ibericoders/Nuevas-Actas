@@ -15,6 +15,10 @@ import java.util.ArrayList;
 
 import javabeans.Acta;
 
+import static aplicaciones_android.a15_pedidos_corr.R.id.Titulo;
+import static aplicaciones_android.a15_pedidos_corr.R.id.edtTitulo;
+import static aplicaciones_android.a15_pedidos_corr.R.id.lvActas;
+
 /**
  * Created by USUARIO on 31/03/2017.
  */
@@ -40,12 +44,12 @@ public class GestionDatos {
 
             salida.close();
         } catch (IOException ex) {
-            ex.printStackTrace();
+                ex.printStackTrace();
         }
     }
 //--------------------------------------------------------------------------------------------------
 
-    //-------------------------------Metodo recuperar acta----------------------------------------------
+//-------------------------------Metodo recuperar acta----------------------------------------------
     public ArrayList<Acta> recuperarActa() {
         ArrayList<Acta> actas = new ArrayList<>();
         String s;
@@ -78,7 +82,7 @@ public class GestionDatos {
 //--------------------------------------------------------------------------------------------------
 
 //--------------------------Enviar texto en correo--------------------------------------------------
-    private void enviar(String[] to, String[] cc,
+    public void enviar(String[] to, String[] cc,
                         String asunto, String mensaje) {
         Intent emailIntent = new Intent(Intent.ACTION_SEND);
         emailIntent.setData(Uri.parse("mailto:"));
@@ -92,5 +96,22 @@ public class GestionDatos {
        // startActivity(Intent.createChooser(emailIntent, "Email "));
     }
 //--------------------------------------------------------------------------------------------------
+
+//-------------------------------Método comprobación------------------------------------------------
+
+   public boolean comprobarDatos(String titulo){
+        boolean res = false;
+
+        for(int i = 0;i<recuperarActa().size() ;i++){
+            //obtenemos el titulo de cada acta y lo
+            //comparamos con el valor recibido
+            if(recuperarActa().equals(titulo)){
+                //System.out.println("Repetido");
+                res = true;
+            }
+        }
+        return res;
+    }
+
 }
 
